@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply bg-transparent border-[1px] py-3 px-5 rounded-md border-gray-200;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social img {
+  height: 18px;
+  width: 18px;
+}
+
+.mountains {
+  background-image: url("/public/mountains.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.stars {
+  background-image: url("/public/stars.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.planets {
+  background-image: url("/public/planets.png");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.listContainer .box {
+  padding: 50px;
+  border: 0.5px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 200ms;
+}
+
+.listContainer .box h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.listContainer .box button {
+  padding: 10px;
+  background-color: orange;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 638px) {
+  .listContainer .box {
+    padding: 20px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .listContainer .box p {
+    text-align: center;
+    display: none;
+  }
+  .listContainer .box button {
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid orange;
+    color: orange;
+    cursor: pointer;
+    width: 50%;
+    padding: 5px;
+  }
+}
